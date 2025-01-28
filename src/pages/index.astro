@@ -1,6 +1,7 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
-import ImageContext from "../../public/sensorbucket-context.png";
+import ImageContext from "../assets/sensorbucket-context.png";
 import Button from "../components/Button.astro";
 ---
 
@@ -15,13 +16,13 @@ import Button from "../components/Button.astro";
         Just connect your application to SensorBucket and access all measurements without vendor specific details.
       </p>
       <div class="flex gap-5">
-        <Button href="https://developer.sensorbucket.nl" size="lg" class="bg-accent text-white">Get started</Button>
+        <Button href="https://developer.sensorbucket.nl" size="lg" class="bg-primary text-white">Get started</Button>
       </div>
-      <p class="mt-16 bg-amber-100 border border-amber-200 p-4">This webpage is still under construction and its content and links will change over time.</p>
     </div>
 
     <div class="flex-1 flex justify-center">
-      <img src={ImageContext.src} alt="" class="w-3/4 mx-auto">
+      <Image src={ImageContext} loading="eager" class="w-3/4 mx-auto" alt="Image showing a diagram containing multiple blocks representing different devices that are sending data to SensorBucket which processes it into a standardized format that is consumed by 'your application'"/>
     </div>
   </div>
+  <p class="mt-16 bg-amber-100 border border-amber-200 p-4">This webpage is still under construction and its content and links will change over time.</p>
 </Layout>
