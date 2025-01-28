@@ -1,0 +1,8 @@
+---
+const path = Astro.routePattern
+---
+<a {...Astro.props} class="flex items-center text-sm text-primary hover:text-accent">
+  <span class=" data-[active=true]:(border-b-2 border-accent -mb-[2px])" data-active={path == Astro.props.href}>
+    <slot/>
+  </span>
+</a>
