@@ -55,6 +55,6 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: |
-            type=registry,ref=ghcr.io/sensorbuckent/sensorbuckent.nl:buildcache
+            type=registry,ref=ghcr.io/sensorbucket/sensorbucket.nl:buildcache
           cache-to: |
-            type=registry,ref=ghcr.io/sensorbuckent/sensorbuckent.nl:buildcache,mode=max
+            type=registry,ref=ghcr.io/sensorbucket/sensorbucket.nl:buildcache,mode=max
