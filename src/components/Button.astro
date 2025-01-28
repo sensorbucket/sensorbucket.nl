@@ -4,7 +4,7 @@ interface Props {
   class?: string
   size?: 'sm' | 'md' | 'lg'
 }
-const {href, class: klass = '', size = 'md'} = Astro.props
+const {href, class: klass = '', size = 'md', ...rest} = Astro.props
 
 const padding = {
   'sm': 'p-x-3 p-y-1',
@@ -22,4 +22,4 @@ let fallbackBackgroundColor = klass.match(/bg-\w+/g) === null ? 'bg-white' : ''
 ---
 <a href={href} class=`flex items-center ${padding[size]} rounded-full ${fallbackBackgroundColor}
   transition duration-200 shadow shadow-xl hover:(shadow-sm brightness-[90%])
-text-center ${fontSize[size]} ${fallbackTextColor} font-semibold ${klass}`><slot/></a>
+text-center ${fontSize[size]} ${fallbackTextColor} font-semibold ${klass}` {...rest}><slot/></a>
