@@ -10,4 +10,5 @@ export default defineConfig({
       injectReset: true,
     }),
   ],
+  compressHTML: true,
 });
